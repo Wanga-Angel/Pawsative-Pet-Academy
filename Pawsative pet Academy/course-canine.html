@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canine Obedience Training - Detail</title>
+    <link rel="stylesheet" href="web-master.css">
+</head>
+<body>
+    <header class="site-header">
+        
+            <div class="logo-ph"><img src="logo.jpeg"width="50"></img></div>
+            <h1>Pawsative pet academy</h1>
+        </div>
+        <nav class="nav-links">
+            <a href="Homepage.html">HOME</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="courses.html" class="active">COURSES</a>
+            <a href="fees.html">ACCOUNT</a>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <div class="green-category-tag">MY COURSE</div>
+        <h2 class="course-main-title">Canine obedience training</h2>
+
+        <div class="detail-hero-frame">
+            <img src="obedience training.jpeg"width="250"></img>
+        </div>
+
+        <div class="info-block-card">
+            <p>this class focuses on a variety of canines and the skill of handling and training the canine with behaviour.</p>
+        </div>
+
+        <a href="fees.html" class="gold-link-btn block-btn-web" onclick="applyForCourse(event, 'Canine obedience training', 1500)">APPLY NOW</a>
+    </main>
+
+    <script>
+        function applyForCourse(event, name, price) {
+            event.preventDefault(); // Pause navigation briefly to register cart variables
+            let cart = JSON.parse(localStorage.getItem('pawsative_cart')) || [];
+            
+            if (!cart.some(item => item.name.toLowerCase() === name.toLowerCase())) {
+                cart.push({ name: name, price: price });
+                localStorage.setItem('pawsative_cart', JSON.stringify(cart));
+            }
+            
+            window.location.href = "fees.html";
+        }
+    </script>
+</body>
+</html>
