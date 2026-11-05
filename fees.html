@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Fees - Pawsative Pet Academy</title>
+    <link rel="stylesheet" href="web-master.css">
+    <script src="fees.js" defer></script>
+    <script src="course.js" defer></script>
+</head>
+<body class="course-page fees-page">
+    <header class="site-header">
+        <div class="brand">
+            <img class="logo" src="logo.jpeg" alt="Pawsative logo">
+            <h1>Pawsative pet academy</h1>
+        </div>
+
+        <h2 class="page-heading">MY COURSES</h2>
+
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="Homepage.html">HOME</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="courses.html">COURSES</a>
+            <a href="fees.html" class="active" aria-current="page">
+                ACCOUNT
+            </a>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <h2>Selected courses</h2>
+
+        <p id="fees-message" role="alert"></p>
+
+        <p id="empty-cart" hidden>
+            No courses selected.
+            <a href="courses.html">Browse courses</a>
+        </p>
+
+        <div id="cart-items"></div>
+
+        <section class="fees-summary" aria-labelledby="summary-heading">
+            <h2 id="summary-heading">Fee summary</h2>
+
+            <table class="fees-table">
+                <caption>
+                    Discounts: 2 courses — 5%, 3 courses — 10%,
+                    4 or more — 15%.
+                </caption>
+                <tbody>
+                    <tr>
+                        <th scope="row">Courses selected</th>
+                        <td id="course-count">0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Subtotal</th>
+                        <td id="subtotal">R0.00</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Discount</th>
+                        <td id="discount-rate">0%</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Savings</th>
+                        <td id="savings">R0.00</td>
+                    </tr>
+                    <tr class="fees-total">
+                        <th scope="row">Total price</th>
+                        <td id="total">R0.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <div class="fees-actions">
+            <a href="courses.html" class="gold-link-btn">
+                ADD COURSES
+            </a>
+
+            <button type="button" id="clear-cart" class="gold-link-btn">
+                CLEAR SELECTION
+            </button>
+
+            <button type="button" id="confirm-selection"
+                    class="gold-link-btn">
+                CONFIRM SELECTION
+            </button>
+        </div>
+
+        <p class="payment-note">
+            Demonstration only. Confirming a selection does not
+            process a payment or complete an enrolment.
+        </p>
+
+        <p id="confirmation-message" role="status"></p>
+    </main>
+
+    <footer class="site-footer">
+        <a href="contact.html">24/7 CHAT</a>
+        <span>FAQ</span>
+        <span>BLOG</span>
+    </footer>
+</body>
+</html>
